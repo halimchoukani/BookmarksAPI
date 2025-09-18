@@ -1,0 +1,13 @@
+services:
+  dev-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: bookmarks2025
+      POSTGRES_DB: bookmarks
+    ports:
+      - '5432:5432'
+    networks:
+      - bookmarks-network
+networks:
+  bookmarks-network:
